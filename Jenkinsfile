@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.build('AbdullahNaif1-ecommerce-devops-project')
+                    docker.build('abdullahNaif1-ecommerce-devops-project')
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    docker.image('AbdullahNaif1-ecommerce-devops-project').inside {
+                    docker.image('abdullahNaif1-ecommerce-devops-project').inside {
                         sh 'npm test'
                     }
                 }
